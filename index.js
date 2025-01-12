@@ -65,25 +65,25 @@ function getLink(array, name) {
 app.get("/proiectpoo/fotbal/:numeJucatorFotbal", (req, res) => {
   const name = req.params.numeJucatorFotbal;
   const link = getLink(fotbalisti, name);
-  res.send(link);
+  res.json(link);
 });
 
 app.get("/proiectpoo/box/:numeJucatorBox", (req, res) => {
   const name = req.params.numeJucatorBox;
   const link = getLink(boxeri, name);
-  res.send(link);
+  res.json(link);
 });
 
 app.get("/proiectpoo/inot/:numeJucatorInot", (req, res) => {
   const name = req.params.numeJucatorInot;
   const link = getLink(inotatori, name);
-  res.send(link);
+  res.json(link);
 });
 
 app.get("/proiectpoo/tenis/:numeJucatorTenis", (req, res) => {
   const name = req.params.numeJucatorTenis;
   const link = getLink(tenismeni, name);
-  res.send(link);
+  res.json(link);
 });
 
 app.listen(port, () => {
